@@ -1,5 +1,5 @@
 import type { LanguageHelpDisplayOptions } from '#lib/i18n/LanguageHelp';
-import { FT, T } from '#lib/types';
+import { FT, T, StarWars } from '#lib/types';
 import type { Guild, GuildMember, User } from 'discord.js';
 
 export const WikipediaNotFound = T('commands/tools:wikipediaNotfound');
@@ -194,3 +194,7 @@ export const WikipediaDescription = T('commands/tools:wikipediaDescription');
 export const WikipediaExtended = T<LanguageHelpDisplayOptions>('commands/tools:wikipediaExtended');
 export const YouTubeDescription = T('commands/tools:youtubeDescription');
 export const YouTubeExtended = T<LanguageHelpDisplayOptions>('commands/tools:youtubeExtended');
+export const StarWarsEmbedTitles = T<StarWars.EmbedTitles>('commands/tools:starWarsPeopleTitles');
+export const StarWarsDescription = T('commands/tools:starWarsDescription');
+export const StarWarsExtended = T<LanguageHelpDisplayOptions>('commands/tools:starWarsExtended');
+export const StarWarsNoResult = FT<{ query: string }, string>('commands/tools:starWarsNoResult');
