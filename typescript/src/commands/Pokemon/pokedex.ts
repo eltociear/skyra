@@ -4,6 +4,7 @@ import { PaginatedMessageCommand, UserPaginatedMessage } from '#lib/structures';
 import type { GuildMessage } from '#lib/types';
 import { CdnUrls } from '#lib/types/Constants';
 import { fetchGraphQLPokemon, getPokemonDetailsByFuzzy, parseBulbapediaURL, resolveColour } from '#utils/APIs/Pokemon';
+import { Emojis } from '#utils/constants';
 import { sendLoadingMessage } from '#utils/util';
 import type { AbilitiesEntry, DexDetails, GenderEntry, StatsEntry } from '@favware/graphql-pokemon';
 import { zalgo } from '@favware/zalgo';
@@ -72,7 +73,7 @@ export class UserPaginatedMessageCommand extends PaginatedMessageCommand {
 			return 'Genderless';
 		}
 
-		return `${genderRatio.male} ♂ | ${genderRatio.female} ♀`;
+		return `${genderRatio.male} ${Emojis.MaleSignEmoji} | ${genderRatio.female} ${Emojis.FemaleSignEmoji}`;
 	}
 
 	/**
